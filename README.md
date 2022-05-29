@@ -20,26 +20,26 @@ Click on Help -> Update. Later click on Manage update sites. Check the boxes nex
 
 ### Option 2: By downloading the files provided here in GitHub
 The following files are needed:
-1. Imaging_FCS_1_60.jar : Put this file in the plugin folder of FIJI (“Fiji.app\plugins”).
+1. Imaging_FCS_1_61.jar : Put this file in the plugin folder of FIJI (“Fiji.app\plugins”).
 2. Imagescience : Either install imagescience.jar in the jar folder within FIJI or link the update side to imagescience. This supports the probability distributions used in the simulator.
 3. Apache POI : You need to install Apache poi-3.17 (version used in writing). The Apache Poi provides the necessary code for the writing and reading of .xlsx spreadsheet files, which are used to store, read experimental data, and store metadata in case of data acquisition. You can copy the whole poi-3.17 folder into the jars folder of Fiji (\Fiji.app\jars). It has also been found that sometimes there are errors in reading the jar files inside the poi folder. In case there are errors while trying to run the plugin, and if the error is associated with poi files, one suggestion is to place all the jar files inside the poi folder directly under the jars folder. In total, there must be 13 jar files as per poi 3.17. Six of them are found just inside the folder. Five of them are in the lib folder, and two are in the ooxml-lib folder.
 
 If you wish to compile the program from scratch:
 
-You will then need Imaging_FCS_1_60.java. This is the Java code from which the .jar file was produced. Before building your project, e.g. with a NetBeans IDE, you must generate .dll related to GPU processing and camera access. Generation of dynamic link library is not required if you do not wish to leverage GPU for faster computation or using our home-built data acquisition software.
-For manual compilation of the GPU and Direct Camera Readout please refer to section XXX in the Imaging FCS_1_60 Manual (ImFCS documentation 1_60.pdf)
+You will then need Imaging_FCS_1_61.java. This is the Java code from which the .jar file was produced. Before building your project, e.g. with a NetBeans IDE, you must generate .dll related to GPU processing and camera access. Generation of dynamic link library is not required if you do not wish to leverage GPU for faster computation or using our home-built data acquisition software.
+For manual compilation of the GPU and Direct Camera Readout please refer to section 1.3.3 in the Imaging FCS_1_61 Manual (ImFCS documentation 1_61.pdf)
 1. PC: If you want to compile the program on a PC in ImageJ, you need to install a JDK (e.g. I used Jave SE - jdk1.8.0_281). For details see http://forum.imagej.net/t/no-javac-jar-found/2340 and http://stackoverflow.com/questions/18455732/play-framework-cant-find-javac.
 2. Mac: To compile the program yourself, you need to install a Java IDE, i.e. an Integrative Development Environment. Netbeans, for instance, is free and worked fine for us. But there are other free IDEs, e.g. Eclipse, JSource, IntelliJ IDEA etc. Note that manual compilation of GPU related linked library requires Mac OS with supported NVIDIA graphic cards, whereas camera access .dll requires Windows PC. We recommend manual compilation through Windows for full functionality.
 
 ## Known issues
-Switch off SCIFIO for file opening in ImageJ2 as Imaging_FCS_1_60 does not work with SCIFIO yet. To switch SCIFIO off, go to Edit\Options\ImageJ2 in the Fiji control bar. A dialog will appear to untick the option “Use SCIFIO when opening files”.
+Switch off SCIFIO for file opening in ImageJ2 as Imaging_FCS_1_61 does not work with SCIFIO yet. To switch SCIFIO off, go to Edit\Options\ImageJ2 in the Fiji control bar. A dialog will appear to untick the option “Use SCIFIO when opening files”.
 
 It has been found that sometimes, Direct Camera Readout fails to save metadata information. Check whether versions of commons-collections4-4.1.jar, ooxml-schemas-1.3.jar, xmlbeans-5.1.3.jar are present in the jars folder of FIJI ("Fiji.app\jars").
 
 ## Test data
 Bilayer.tif: This is an example tiff stack to test the program. In general, a tiff stack should contain at least 20,000 frames which were recorded with a time resolution of 1 ms or less. This is sufficient to resolve the dynamics in lipid bilayers. However, we recommend taking at least 50,000 frames for better statistics. For faster processes, shorter frame times and more frames are required (see Sankaran et al. Analytical Chemistry 2013).
 
-## ImFCS documentation 1_60.pdf
+## ImFCS documentation 1_61.pdf
 This manual contains the basic instructions on using the program, the definition of all items in the control and fit panels, the file formats of the saved data, and the theoretical functions used for fitting.
 
 ## Disclaimer
