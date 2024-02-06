@@ -198,7 +198,7 @@ import imfcs.TimerFit;
  *  Aik, D. Y. K. and Wohland, T., 2022, Biophys. J., 121: 2663-2670
  *
  * */
-public class Imaging_FCS_1_613 implements PlugIn {
+public class Imaging_FCS implements PlugIn {
 
     private boolean isTimeProcesses = false;      // flag whether to time 2D and 3D fitting for both CPU and GPU
     private TimerFit timerObj;          // use to time fitting related 
@@ -966,7 +966,7 @@ public class Imaging_FCS_1_613 implements PlugIn {
     // DC-FCCS
     private boolean isNormalizeQwithObsVol = true;             // normalize N to observation volume. Use RMS of obs1 and obs2 to normalize Nccf
 
-    public Imaging_FCS_1_613() {
+    public Imaging_FCS() {
         try {
             JFrame.setDefaultLookAndFeelDecorated(false);
             UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
@@ -10842,7 +10842,7 @@ public class Imaging_FCS_1_613 implements PlugIn {
 
             if ((!JBackgroundSubtractionComponentObj.rbtnIsSubtractionAfterBleachCorrection.isSelected() && JBackgroundSubtractionComponentObj.selectedMode == modeBGR.modeBGREnum.CONSTANT_BACKGROUND) || (!JBackgroundSubtractionComponentObj.rbtnIsSubtractionAfterBleachCorrection.isSelected() && JBackgroundSubtractionComponentObj.selectedMode == modeBGR.modeBGREnum.LOAD_BGR_IMAGE)) {
                 //run this version for Constant background subtraction AND subtraction occur before applying bleach correction (essentially what is implemented in Imaging_FCS_1_52 and Imaging_FCS_1_61) 
-                CPU_Loop_Ver1(); //Current working version; do not alter anything under this imageType; extra changes made for Imaging_FCS_1_613 (CPU imageType) can be found in CPU_Loop_Ver2().
+                CPU_Loop_Ver1(); //Current working version; do not alter anything under this imageType; extra changes made for Imaging_FCS (CPU imageType) can be found in CPU_Loop_Ver2().
             } else {
                 CPU_Loop_Ver2();
             }
