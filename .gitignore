@@ -94,3 +94,6 @@ checkstyle.xml
 
 # RoboVM (iOS development with Java)
 .robovm/
+
+## MacOSX
+.DS_Store
